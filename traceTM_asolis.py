@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-import collections
-import sys
+from collections import deque
 import csv
-from typing import List
-import time
+
+def BFS(transitions):
+
+
+    return
 
 
 #Main
@@ -21,11 +23,8 @@ def main():
         transitions = []
 
         for line in csvFile[7:]:
-                # with open('output_asolis4.txt', 'a') as file:
-                #     file.write(f"Problem:{problemNum}\n")
             transitions.append(line)
-        
-        print(f"Transitions: {transitions}")
+        BFS(transitions)
                     
 
                 

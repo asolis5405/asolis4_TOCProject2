@@ -4,11 +4,13 @@ from collections import deque
 import math
 
 
-def test_input(start_state, accept_state, reject_state, transitions, input_string, max_depth):
+def NTM(start_state, accept_state, reject_state, transitions, input_string, max_depth):
     #initialize the configuration
     initial_config = ("", start_state, input_string)
     #use deque to store paths
     queue = deque([[initial_config]])
+    #keep track of longest path for reject
+    reject_path = []
     #count transitions made
     steps = 0
     #keep track of depth
@@ -34,6 +36,10 @@ def test_input(start_state, accept_state, reject_state, transitions, input_strin
             print_nondeterminism(total_transitions, non_leaf_nodes)
             print_path(path)
             return
+
+        #update reject_path
+        if len(path)>len(reject_path):
+            reject_path = path
 
         #check for reject state or if max_depth has been reached
         if state == reject_state or steps >= max_depth:
@@ -71,10 +77,13 @@ def test_input(start_state, accept_state, reject_state, transitions, input_strin
         steps += 1
 
     #if accept is not reached
-    print(f"String rejected or max depth reached.")
+    if steps >= max_depth: 
+        print(f"Execution stopped after {max_depth} steps." )
+    else:
+        print(f"String rejected in {total_transitions} transitions.")
     print(f"Depth of tree: {max_depth_reached}")
-    print(f"Total transitions: {total_transitions}")
     print_nondeterminism(total_transitions, non_leaf_nodes)
+    print_path(reject_path)
 
 #function to find the degree of nondeterminism
 def print_nondeterminism(total_transitions, non_leaf_nodes):
@@ -93,13 +102,13 @@ def print_path(path):
 
 # Main function
 def main():
-    file_name = "a_plus.csv"  #CSV file
+    file_name = "equal_01s.csv"  #CSV file
     with open(file_name, mode='r') as file:
         csvFile = list(csv.reader(file))
 
         print(f"Machine Name: {', '.join(csvFile[0])}")
 
-        input_string = "aaa"  #choose input string
+        input_string = "00001111"  #choose input string
         print(f"Initial String: {input_string}")
 
         start_state = csvFile[4][0]
@@ -114,10 +123,10 @@ def main():
                 transitions[key] = []
             transitions[key].append((next_state, write_symbol, direction))
 
-    max_depth = 50
+    max_depth = 100
 
     #run TM
-    test_input(start_state, accept_state, reject_state, transitions, input_string, max_depth)
+    NTM(start_state, accept_state, reject_state, transitions, input_string, max_depth)
 
 if __name__ == '__main__':
     main()
