@@ -116,7 +116,7 @@ def print_tree(tree_of_paths):
 
 # Main function
 def main():
-    file_name = "a_plus"  #CSV file
+    file_name = "a_plus.csv"  #CSV file
     with open(file_name, mode='r') as file:
         csvFile = list(csv.reader(file))
 
