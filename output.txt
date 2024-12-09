@@ -1,0 +1,289 @@
+Machine Name: a plus
+Initial String: aaaaa
+String accepted in 11 transitions.
+Depth of tree: 6
+Degree of nondeterminism: 2
+Path taken to accept:
+[q1]aaaaa
+a[q1]aaaa
+aa[q1]aaa
+aaa[q1]aa
+aaaa[q1]a
+aaaaa[q2]
+aaaa[q3]a_
+ 
+Path of all configurations explored:
+[q1]aaaaa
+a[q1]aaaa
+a[q2]aaaa
+aa[q1]aaa
+aa[q2]aaa
+aaa[q1]aa
+aaa[q2]aa
+aaaa[q1]a
+aaaa[q2]a
+aaaaa[q1]
+aaaaa[q2]
+aaaa[q3]a_
+ 
+Machine Name: a plus
+Initial String: aaaba
+String rejected in 6 transitions.
+Depth of tree: 3
+Degree of nondeterminism: 2
+[q1]aaaba
+a[q1]aaba
+aa[q1]aba
+aaa[q1]ba
+ 
+Machine Name: a*b*c* Nondeterministic
+Initial String: aabbcc
+String accepted in 29 transitions.
+Depth of tree: 7
+Degree of nondeterminism: 3
+Path taken to accept:
+[q0]aabbcc
+a[q0]abbcc
+aa[q0]bbcc
+aab[q1]bcc
+aabb[q2]cc
+aabbc[q2]c
+aabbcc[q3]
+aabbcc_[qacc]
+ 
+Path of all configurations explored:
+[q0]aabbcc
+a[q0]abbcc
+a[q1]abbcc
+a[q2]abbcc
+a[q3]abbcc
+aa[q0]bbcc
+aa[q1]bbcc
+aa[q2]bbcc
+aa[q3]bbcc
+aab[q1]bcc
+aab[q2]bcc
+aab[q3]bcc
+aab[q1]bcc
+aab[q2]bcc
+aab[q3]bcc
+aabb[q1]cc
+aabb[q2]cc
+aabb[q3]cc
+aabb[q1]cc
+aabb[q2]cc
+aabb[q3]cc
+aabbc[q2]c
+aabbc[q3]c
+aabbc[q2]c
+aabbc[q3]c
+aabbcc[q2]
+aabbcc[q3]
+aabbcc[q2]
+aabbcc[q3]
+aabbcc_[qacc]
+ 
+Machine Name: a*b*c* Nondeterministic
+Initial String: ajc
+String rejected in 4 transitions.
+Depth of tree: 1
+Degree of nondeterminism: 4
+[q0]ajc
+a[q0]jc
+ 
+Machine Name: 1(0+)1
+Initial String: 10001
+String accepted in 12 transitions.
+Depth of tree: 9
+Degree of nondeterminism: 2
+Path taken to accept:
+[q0]10001
+1[q1]0001
+10[q1]001
+100[q1]01
+1000[q2]1
+100[q3]01
+10[q3]001
+1[q3]0001
+[q3]10001
+[qacc]10001
+ 
+Path of all configurations explored:
+[q0]10001
+1[q1]0001
+10[q1]001
+10[q2]001
+100[q1]01
+100[q2]01
+1000[q1]1
+1000[q2]1
+100[q3]01
+10[q3]001
+1[q3]0001
+[q3]10001
+[qacc]10001
+ 
+Machine Name: 1(0+)1
+Initial String: 11
+String rejected in 1 transitions.
+Depth of tree: 1
+Degree of nondeterminism: 1
+[q0]11
+1[q1]1
+ 
+Machine Name: {w | w has the same number of 0's and 1's} Nondeterministic
+Initial String: 0011
+String accepted in 21 transitions.
+Depth of tree: 15
+Degree of nondeterminism: 2
+Path taken to accept:
+[q0]0011
+_[q1]011
+_0[q1]11
+_[q3]0x1
+[q3]_0x1
+_[q4]0x1
+_x[q1]x1
+_xx[q1]1
+_x[q3]xx
+_[q3]xxx
+[q3]_xxx
+_[q5]xxx
+_x[q5]xx
+_xx[q5]x
+_xxx[q5]
+_xxx_[qacc]
+ 
+Path of all configurations explored:
+[q0]0011
+_[q1]011
+_0[q1]11
+_[q3]0x1
+[q3]_0x1
+_[q4]0x1
+_[q5]0x1
+_x[q1]x1
+_xx[q1]1
+_x[q3]xx
+_[q3]xxx
+[q3]_xxx
+_[q4]xxx
+_[q5]xxx
+_x[q4]xx
+_x[q5]xx
+_xx[q4]x
+_xx[q5]x
+_xxx[q4]
+_xxx[q5]
+_xx[q3]x_
+_xxx_[qacc]
+ 
+Machine Name: {w | w has the same number of 0's and 1's} Nondeterministic
+Initial String: 011
+String rejected in 7 transitions.
+Depth of tree: 5
+Degree of nondeterminism: 2
+[q0]011
+_[q1]11
+[q3]_x1
+_[q4]x1
+_x[q4]1
+_xx[q2]
+ 
+Machine Name: {w | w has the same number of 0's and 1's} Nondeterministic
+Initial String: 0000000011111111
+Execution stopped after 100 steps.
+Depth of tree: 90
+Degree of nondeterminism: 2
+[q0]0000000011111111
+_[q1]000000011111111
+_0[q1]00000011111111
+_00[q1]0000011111111
+_000[q1]000011111111
+_0000[q1]00011111111
+_00000[q1]0011111111
+_000000[q1]011111111
+_0000000[q1]11111111
+_000000[q3]0x1111111
+_00000[q3]00x1111111
+_0000[q3]000x1111111
+_000[q3]0000x1111111
+_00[q3]00000x1111111
+_0[q3]000000x1111111
+_[q3]0000000x1111111
+[q3]_0000000x1111111
+_[q4]0000000x1111111
+_x[q1]000000x1111111
+_x0[q1]00000x1111111
+_x00[q1]0000x1111111
+_x000[q1]000x1111111
+_x0000[q1]00x1111111
+_x00000[q1]0x1111111
+_x000000[q1]x1111111
+_x000000x[q1]1111111
+_x000000[q3]xx111111
+_x00000[q3]0xx111111
+_x0000[q3]00xx111111
+_x000[q3]000xx111111
+_x00[q3]0000xx111111
+_x0[q3]00000xx111111
+_x[q3]000000xx111111
+_[q3]x000000xx111111
+[q3]_x000000xx111111
+_[q4]x000000xx111111
+_x[q4]000000xx111111
+_xx[q1]00000xx111111
+_xx0[q1]0000xx111111
+_xx00[q1]000xx111111
+_xx000[q1]00xx111111
+_xx0000[q1]0xx111111
+_xx00000[q1]xx111111
+_xx00000x[q1]x111111
+_xx00000xx[q1]111111
+_xx00000x[q3]xx11111
+_xx00000[q3]xxx11111
+_xx0000[q3]0xxx11111
+_xx000[q3]00xxx11111
+_xx00[q3]000xxx11111
+_xx0[q3]0000xxx11111
+_xx[q3]00000xxx11111
+_x[q3]x00000xxx11111
+_[q3]xx00000xxx11111
+[q3]_xx00000xxx11111
+_[q4]xx00000xxx11111
+_x[q4]x00000xxx11111
+_xx[q4]00000xxx11111
+_xxx[q1]0000xxx11111
+_xxx0[q1]000xxx11111
+_xxx00[q1]00xxx11111
+_xxx000[q1]0xxx11111
+_xxx0000[q1]xxx11111
+_xxx0000x[q1]xx11111
+_xxx0000xx[q1]x11111
+_xxx0000xxx[q1]11111
+_xxx0000xx[q3]xx1111
+_xxx0000x[q3]xxx1111
+_xxx0000[q3]xxxx1111
+_xxx000[q3]0xxxx1111
+_xxx00[q3]00xxxx1111
+_xxx0[q3]000xxxx1111
+_xxx[q3]0000xxxx1111
+_xx[q3]x0000xxxx1111
+_x[q3]xx0000xxxx1111
+_[q3]xxx0000xxxx1111
+[q3]_xxx0000xxxx1111
+_[q4]xxx0000xxxx1111
+_x[q4]xx0000xxxx1111
+_xx[q4]x0000xxxx1111
+_xxx[q4]0000xxxx1111
+_xxxx[q1]000xxxx1111
+_xxxx0[q1]00xxxx1111
+_xxxx00[q1]0xxxx1111
+_xxxx000[q1]xxxx1111
+_xxxx000x[q1]xxx1111
+_xxxx000xx[q1]xx1111
+_xxxx000xxx[q1]x1111
+_xxxx000xxxx[q1]1111
+_xxxx000xxx[q3]xx111
+_xxxx000xx[q3]xxx111
+ 
